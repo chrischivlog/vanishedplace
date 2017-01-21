@@ -1,9 +1,8 @@
-<?php
-	$pdo = new PDO('mysql:host=localhost;dbname=php', 'php_user', 'bla');
-?>
+
 
 <?php
 	session_start();
+	include 'db_conn.php';
 ?>
 
 
