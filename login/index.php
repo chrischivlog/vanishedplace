@@ -1,3 +1,11 @@
+<?php
+	
+session_start();
+		 
+	
+?>
+
+
 <html>
 	<head>
 	<h1>Login</h1>
