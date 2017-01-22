@@ -24,6 +24,7 @@
 			
 			<form action="message_write.php" method="post">
 				<textarea cols="50" rows="10" name="message">Ihre Nachricht hier...</textarea>
+				Zeit<input type="text" name="time" value="" />
 				<input type="submit" value="senden" />
 			</form>						
 			

@@ -34,6 +34,7 @@
 			
 				foreach ($pdo->query($sql) as $row) {
 					$loginvalid = true;
+					$_SESSION ["user_id"] = $row ["user_id"];
 				}
 			
 				if ($loginvalid) {
