@@ -1,0 +1,11 @@
+name
+passwort
+email
+>
+Registrierung Datenbank 0/1
+>
+email versenden
+>
+bestätigung
+>
+Nutzer kann sich mit daten anmelden
