@@ -1,25 +1,19 @@
 <?php
-	
-session_start();
-		 
-	
+	session_start();
 ?>
 
+<?php
+	include 'header.php';
+?>	
+	<form action="check2.php" method="post">
+  		<p> 
+  			Name<input type="text" name="name" value="" /><br>
+  			Passwort<input type="password" name="password" value="" /><br>
+  		    <input type="submit" value="anmelden" />
+  		</p> 
+  	</form>
+	<a href="register.php">Registrieren</a>	
 
-<html>
-	<head>
-	<h1>Login</h1>
-	</head>
-	<body>
-	
-		<form action="check2.php" method="post">
-  			<p> 
-  				Name<input type="text" name="name" value="" /><br>
-  				Passwort<input type="password" name="password" value="" /><br>
-  				<input type="submit" value="anmelden" />
-  				
-  			</p> 
-  		</form>
-  					<a href="register.php">registrieren</a>	
-	</body>
-</html>
+<?php
+	include 'footer.php';
+?>

@@ -1,20 +1,11 @@
-
-
 <?php
 	session_start();
 ?>
-
-
 
 <?php
 	include 'header.php';
 ?>
 
-<html>
-	<head>
-	<h1>Message Create</h1>
-	</head>
-	<body>
 	<?php
 		#echo $_SESSION["validsession"];
 		#geheimer Text	
@@ -37,9 +28,10 @@
 		}	
 			
 	?>	
-	</body>
-</html>
 
+<?php
+	include 'footer.php';
+?>
 
 
 

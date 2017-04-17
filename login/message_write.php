@@ -1,21 +1,12 @@
-
-
 <?php
 	session_start();
-	include 'db_conn.php';
 ?>
 
-
-
 <?php
+	include 'db_conn.php';
 	include 'header.php';
 ?>
 
-<html>
-	<head>
-	<h1>Message Write</h1>
-	</head>
-	<body>
 	<?php
 		#echo $_SESSION["validsession"];
 		#geheimer Text	
@@ -39,9 +30,10 @@
 		}	
 			
 	?>	
-	</body>
-</html>
 
+<?php
+	include 'footer.php';
+?>
 
 
 

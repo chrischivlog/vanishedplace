@@ -1,22 +1,12 @@
-
-
 <?php
 	session_start();
-	include 'db_conn.php';
 ?>
 
-
-
 <?php
+	include 'db_conn.php';
 	include 'header.php';
 ?>
 
-<html>
-	<head>
-	<h1>Message Board</h1>
-	<meta http-equiv="refresh" content="5">
-	</head>
-	<body>
 	<?php
 		#echo $_SESSION["validsession"];
 		#geheimer Text	
@@ -57,9 +47,9 @@
 		}	
 			
 	?>	
-	</body>
-</html>
 
-
+<?php
+	include 'footer.php';
+?>
 
 

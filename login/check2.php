@@ -1,18 +1,14 @@
-
-
 <?php
 	session_start();
+?>
+
+<?php
 	include 'db_conn.php';
 ?>
 
-
-
-
-<html>
-	<head>
-	<h1>Check2</h1>
-	</head>
-	<body>
+<?php
+	include 'header.php';
+?>
 		<?php
 		
 			if ((isset( $_SESSION["validsession"])) and ($_SESSION["validsession"] == "angemeldet")) { 
@@ -53,11 +49,5 @@
 		?>
 		
 <?php
-	include 'header.php';
+	include 'footer.php';
 ?>
-		
-	</body>
-	<br>
-	<a href="fortknox.php">Zugriff auf geheime Daten</a>
-	
-</html>

@@ -1,10 +1,17 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=php', 'php_user', 'bla');
+	session_start();
+?>
 
+<?php
+	include 'db_conn.php';
+	include 'header.php';
+?>
 
-$sql = "SELECT user_id, name, password FROM users";
-foreach ($pdo->query($sql) as $row) {
-   echo $row['user_id']." ".$row['name']."<br />";
-   echo "Password: ".$row['password']."<br /><br />";
-}
+<?php
+
+	$sql = "SELECT user_id, name, password FROM users";
+	foreach ($pdo->query($sql) as $row) {
+ 	  	echo $row['user_id']." ".$row['name']."<br /><br />";
+	}
+	
 ?>

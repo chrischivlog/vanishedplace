@@ -1,17 +1,11 @@
 <?php
-	
-session_start();
-		 
-	
+	session_start();
 ?>
 
+<?php
+	include 'header.php';
+?>
 
-<html>
-	<head>
-	<h1>Registrierung</h1>
-	</head>
-	<body>
-	
 		<form action="check_register.php" method="post">
   			<p> 
   				Name<input type="text" name="name" value="" /><br>
@@ -19,6 +13,7 @@ session_start();
   				Passwort<input type="password" name="password" value="" /><br>
   				<input type="submit" value="anmelden" />
   			</p> 
-  		</form>
-	</body>
-</html>
+
+<?php
+	include 'footer.php';
+?>
