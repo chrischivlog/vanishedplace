@@ -26,7 +26,7 @@
 				
 				$loginvalid = false;
 			
-				$sql = "SELECT user_id, name, password FROM users where name='".$_POST['name']."' and users.password = '".$_POST['password']."'";
+				$sql = "SELECT user_id, name, password FROM users where name='".$_POST['name']."' and users.password = '".$_POST['password']."' and verified = 1 ";
 				#echo "<br>".$sql."<br>";
 			
 				foreach ($pdo->query($sql) as $row) {
