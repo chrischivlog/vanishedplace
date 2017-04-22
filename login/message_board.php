@@ -1,6 +1,9 @@
 <?php
 	session_start();
 ?>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
 <?php
 	include 'db_conn.php';
@@ -14,31 +17,39 @@
 				
 			#$sql = "SELECT * FROM messages order by id_msg DESC";
 			$sql = "SELECT m.id_msg, m.msg, m.min_msg, m.min_msg, u.name  FROM messages m, users u WHERE u.user_id = m.usr_cre_msg order by m.id_msg DESC"; 
-			?><table style="width:100%"> 
-				<tr>
-    				<th>ID</th>
-    				<th>MSG</th> 
-    				<th>Time</th>
-    				<th>Name</th>
-    				<!-- <th>Date</th> -->    				    				
-    		  	</tr><?php 
-			
-			foreach ($pdo->query($sql) as $row) {
-				?><tr><?php	
-					?><td><?php		echo $row ["id_msg"];?></td><?php	
-					?><td><?php		echo $row ["msg"];?></td><?php	
-					?><td><?php		echo $row ["min_msg"];?></td><?php	
-					?><td><?php		echo $row ["name"];?></td><?php	
-					/*
-					?><td><?php		echo $row ["usr_cre_msg"];?></td><?php	
-					?><td><?php		echo $row ["cre_msg"]; ?></td><?php
-					*/
-				?></tr><?php							
+			?>
 
-			}
 			
-			?></table><?php
-			
+				<div class="wrapper">	
+				<?php
+				foreach ($pdo->query($sql) as $row) {
+				?>
+					<div class="table">
+    
+    					<div class="row header blue">
+     						<div class="cell">
+        						<?php echo $row ["name"];?>
+      						</div>
+
+						</div>
+    
+    					<div class="row">
+
+      						<div class="cell">
+								<?php echo $row ["msg"];?>
+      						</div>
+
+    					</div>
+
+  					</div>
+  					
+  					<?php
+	
+				}
+				?>
+				</div>
+				<?php 
+							
 		} else {
 			echo "Du bist nicht Angemeldet";
 			?> 
