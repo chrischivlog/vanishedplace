@@ -6,7 +6,6 @@
 	include 'db_conn.php';
 ?>
 
-
 <?php
 	include 'header.php';
 ?>
@@ -25,6 +24,11 @@
 			
 				if ($loginvalid) {
 					echo "Sie sind freigeschalten!"; 
+					
+					$sql = "update users set verified = 1 where mail_id = '".$_GET['id']."'";
+					$stmt = $pdo->prepare($sql);        
+            		$stmt->execute();  
+			
 					?>
 						</br><a href="index.php">Anmelden</a>	
 					<?php
