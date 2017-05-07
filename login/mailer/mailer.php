@@ -13,9 +13,10 @@
 		echo "Mailversand";
 		$mail_link_srv = 'http://vaplac.gnubis.de';
  		$mail_link = $mail_link_srv . '/check_regmail.php?id=' . $mail_id; 
- 		$to      = 'chrischimc@gmail.com';
-		$subject = 'registrierung auf Vaplac';
-		$message = 'Hallo, vielen dank das sie sich auf unser seite Angemldet haben. Bitte bestättigen sie ihre Email adreese mit dem in der E-Mail angegebenen Link. ' . $mail_link;
+ 		$to      = $mail;
+		$subject = 'Registrierung auf VanishedPlace vaplac.gnubis.de';
+		$message = 'Hallo, vielen Dank das Du dich bei uns registriert hast. Bitte bestätige die Anmeldung '.
+				   'mit dem in der E-Mail angegebenen Link. ' . $mail_link . ' Wir wünschen Dir jetzt viel Spass beim vanishen!';
 		$headers = 	'From: noreply@vaplac.gnubis.de' . "\r\n" .
 					'Reply-To: noreply@vaplac.gnubis.de' . "\r\n" .
 					'X-Mailer: PHP/' . phpversion();

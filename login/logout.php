@@ -1,12 +1,6 @@
 <?php
-	session_start();	
-	session_destroy();		 
+session_start ();
+session_destroy ();
+header("location: index.php"); 
 ?>
-<?php
-	include 'header.php';
-?>	
-	Sie sind Abgemeldet! <a href="index.php">Zum Login</a>
-		
-<?php
-	include 'footer.php';
-?>
+

@@ -1,19 +1,32 @@
 <?php
-	session_start();
+session_start ();
 ?>
 
 <?php
-	include 'header.php';
+if ((isset ( $_SESSION ["validsession"] )) and ($_SESSION ["validsession"] == "angemeldet")) {
+	header ( "location: message_board.php" );
+}
+
 ?>	
-	<form action="check2.php" method="post">
-  		<p> 
-  			Name<input type="text" name="name" value="" /><br>
-  			Passwort<input type="password" name="password" value="" /><br>
-  		    <input type="submit" value="anmelden" />
-  		</p> 
-  	</form>
-	<a href="register.php">Registrieren</a>	
 
 <?php
-	include 'footer.php';
+include 'header.php';
 ?>
+<form action="check2.php" method="post">
+	<div>
+		Name<input type="text" name="name" value="" />
+	</div>
+	<div>
+		Passwort<input type="password" name="password" value="" />
+	</div>
+	<input type="submit" value="Anmelden" class="button" />
+
+</form>
+<a href="register.php" class="button">Registrieren</a>
+
+<?php
+include 'footer.php';
+?>
+
+
+

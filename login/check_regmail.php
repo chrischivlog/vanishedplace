@@ -1,46 +1,45 @@
 <?php
-	session_start();
+session_start ();
 ?>
 
 <?php
-	include 'db_conn.php';
+include 'db_conn.php';
 ?>
 
 <?php
-	include 'header.php';
+include 'header.php';
 ?>
 
 
 	<?php
-			if ( isset($_GET['id']) ) {
+	if (isset ( $_GET ['id'] )) {
 		
-				$loginvalid = false;
+		$loginvalid = false;
 		
-				$sql = "SELECT user_id, name, password FROM users where mail_id = '".$_GET['id']."'";
+		$sql = "SELECT user_id, name FROM users where mail_id = '" . $_GET ['id'] . "'";
+		
+		foreach ( $pdo->query ( $sql ) as $row ) {
+			$loginvalid = true;
+		}
+		
+		if ($loginvalid) {
+			echo "Sie sind freigeschalten!";
 			
-				foreach ($pdo->query($sql) as $row) {
-					$loginvalid = true;
-				}
+			$sql = "update users set verified = 1 where mail_id = '" . $_GET ['id'] . "'";
+			$stmt = $pdo->prepare ( $sql );
+			$stmt->execute ();
 			
-				if ($loginvalid) {
-					echo "Sie sind freigeschalten!"; 
-					
-					$sql = "update users set verified = 1 where mail_id = '".$_GET['id']."'";
-					$stmt = $pdo->prepare($sql);        
-            		$stmt->execute();  
-			
-					?>
-						</br><a href="index.php">Anmelden</a>	
-					<?php
-				}
-				else {
-					echo 'Zugriff verweigert!'; 
-				}
-
-			}   			
-		?>
+			?>
+</br>
+<a href="index.php" class="button">Anmelden</a>
+<?php
+		} else {
+			echo 'Zugriff verweigert!';
+		}
+	}
+	?>
 
 	
 <?php
-	include 'footer.php';
+include 'footer.php';
 ?>

@@ -11,7 +11,7 @@
   				Name<input type="text" name="name" value="" /><br>
   			  	Email<input type="text" name="mail" value="" /><br>	
   				Passwort<input type="password" name="password" value="" /><br>
-  				<input type="submit" value="anmelden" />
+  				<input type="submit" value="Registrieren" class="button" />
   			</p> 
 
 <?php

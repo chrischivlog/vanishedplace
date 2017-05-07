@@ -1,6 +1,6 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   font-weight: 400;
   color: #3b3b3b;
@@ -35,15 +35,15 @@ body {
   background: #e9e9e9;
 }
 .row.header {
-  font-weight: 900;
+  /*font-weight: 900;*/
   color: #ffffff;
-  background: #ea6153;
+  background: #465c85;
 }
 .row.green {
-  background: #27ae60;
+  background: #465c85;
 }
 .row.blue {
-  background: #2980b9;
+  background: #465c85;
 }
 @media screen and (max-width: 580px) {
   .row {
@@ -63,3 +63,102 @@ body {
   }
 }
 
+
+/*-------*/
+.button {
+    background-color: #465c85;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+a.button_red:link, a.button_red:visited {
+    background-color: #ff7964;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+a.button_red:hover, a.button_red:active {
+    background-color: #ffa094;
+}
+
+a.button:link, a.button:visited {
+    background-color: #465c85;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+a.button:hover, a.button:active {
+    background-color: #7f99a2;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+  	font-size: 14px;    
+    margin: 8px 0;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    max-width: 1000px; 
+    max-height: 1000px;    
+}
+
+textarea {
+	width: 100%;
+    padding: 12px 20px;
+  	font-size: 14px;    
+    margin: 8px 0;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    max-width: 1000px; 
+    max-height: 1000px;
+}
+
+label { display: block; width: 7em; }
+
+div.content {
+    margin: auto;
+    width: 80%;
+/*   border: 3px solid #465c85;*/
+    padding: 10px;
+
+}  
+
+
+div.piccen {
+    margin: auto;
+    width: 120%;
+    border: 3px;
+    padding: 0px;
+}  
+    
+
+img {
+    width: 100%;
+    height: auto;
+    position: center;
+    max-width: 1000px; 
+    max-height: 1000px;    
+}
