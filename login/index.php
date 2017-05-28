@@ -14,10 +14,10 @@ include 'header.php';
 ?>
 <form action="check2.php" method="post">
 	<div>
-		Name<input type="text" name="name" value="" />
+		Name<br><input type="text" name="name" value="" />
 	</div>
 	<div>
-		Passwort<input type="password" name="password" value="" />
+		Passwort<br><input type="password" name="password" value="" />
 	</div>
 	<input type="submit" value="Anmelden" class="button" />
 
